@@ -1,8 +1,12 @@
-import React, { FC, useState } from 'react';
+import { FC, useState } from 'react';
 import styled from 'styled-components';
+import Logo from '../../assets/svgs/logo.svg';
+import logo from '../../assets/png/logo512.png';
 
 const Container = styled.div`
   border: 1px solid red;
+  padding: 1rem;
+  margin: 1rem;
 `;
 
 export interface CounterProps {
@@ -17,7 +21,10 @@ const Counter: FC<CounterProps> = ({ ...rest }) => {
       <button type="button" onClick={() => setCount(count + 1)} data-testid="button">
         Click Me!
       </button>
+      <img src={logo} alt="" srcSet="" />
+      <Logo />
     </Container>
   );
 };
+
 export default Counter;

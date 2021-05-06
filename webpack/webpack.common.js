@@ -8,6 +8,7 @@ module.exports = {
     extensions: ['.tsx', '.ts', '.js', '.jsx'],
   },
   devServer: {
+    open: false,
     port: 3000,
   },
   module: {
@@ -30,8 +31,12 @@ module.exports = {
         type: 'asset/resource',
       },
       {
-        test: /\.(woff(2)?|eot|ttf|otf|svg|)$/,
+        test: /\.(woff(2)?|eot|ttf|otf|)$/,
         type: 'asset/inline',
+      },
+      {
+        test: /\.svg$/,
+        use: ['@svgr/webpack'],
       },
     ],
   },
