@@ -1,7 +1,7 @@
 {
   "name": "react-typescript-template",
   "version": "0.1.0",
-  "description": "",
+  "description": "React TypeScript Boiler with Storybook & Styled Components and Webpack 5",
   "main": "index.js",
   "author": "Tushar Mistry",
   "license": "ISC",
