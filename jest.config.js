@@ -1,4 +1,6 @@
 module.export = {
+  moduleDirectories: ['node_modules', 'assets', 'components', 'utils', __dirname],
+
   // The root of your source code, typically /src
   // `<rootDir>` is a token Jest substitutes
   roots: ['<rootDir>/src'],

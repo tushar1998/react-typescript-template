@@ -6,9 +6,16 @@ module.exports = {
   entry: path.resolve(__dirname, '..', './src/index.tsx'),
   resolve: {
     extensions: ['.tsx', '.ts', '.js', '.jsx'],
+    alias: {
+      // assets: path.resolve("../src/assets"),
+      assets: path.resolve(__dirname, '..', 'src', 'assets'),
+      components: path.resolve(__dirname, '..', 'src', 'components'),
+      styles: path.resolve(__dirname, '..', 'src', 'styles'),
+      stories: path.resolve(__dirname, '..', 'src', 'stories'),
+      utils: path.resolve(__dirname, '..', 'src', 'utils'),
+    },
   },
   devServer: {
-    open: false,
     port: 3000,
   },
   module: {

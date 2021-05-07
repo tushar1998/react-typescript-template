@@ -1,7 +1,7 @@
 import { FC, useState } from 'react';
 import styled from 'styled-components';
-import Logo from '../../assets/svgs/logo.svg';
-import logo from '../../assets/png/logo512.png';
+import Logo from 'assets/svgs/logo.svg';
+import logo from 'assets/png/logo512.png';
 
 const Container = styled.div`
   border: 1px solid red;
@@ -21,8 +21,8 @@ const Counter: FC<CounterProps> = ({ ...rest }) => {
       <button type="button" onClick={() => setCount(count + 1)} data-testid="button">
         Click Me!
       </button>
-      <img src={logo} alt="" srcSet="" />
       <Logo />
+      <img src={logo} alt="" srcSet="" />
     </Container>
   );
 };
