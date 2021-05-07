@@ -13,8 +13,8 @@
     "clean": "rimraf build",
     "lint": "eslint --fix \"./src/**/*.{js,jsx,ts,tsx,scss,css,json}\"",
     "format": "prettier --write \"./src/**/*.{js,jsx,ts,tsx,scss,css,json,md}\"",
-    "test": "jest -c jest.config.js --watch",
-    "coverage": "jest -c jest.config.js --coverage",
+    "test": "jest -c jest.config.ts --watch",
+    "coverage": "jest -c jest.config.ts --coverage",
     "build-storybook": "build-storybook"
   },
   "keywords": [
@@ -88,6 +88,7 @@
     "style-loader": "^2.0.0",
     "styled-components": "^5.2.3",
     "ts-jest": "^26.5.5",
+    "ts-node": "^9.1.1",
     "typescript": "^4.2.4",
     "webpack": "^5.35.1",
     "webpack-bundle-analyzer": "^4.4.1",

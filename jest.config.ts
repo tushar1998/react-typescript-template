@@ -1,16 +1,19 @@
-module.export = {
-  moduleDirectories: ['node_modules', 'assets', 'components', 'utils', __dirname],
-
+export default {
   // The root of your source code, typically /src
   // `<rootDir>` is a token Jest substitutes
   roots: ['<rootDir>/src'],
-
   // Jest transformations -- this adds support for TypeScript
   // using ts-jest
   transform: {
     '^.+\\.(j|t)sx?$': 'ts-jest',
   },
-  testMatch: ['<rootDir>/src/**/>(*.)test.{js, jsx}'], // finds test
+
+  moduleNameMapper: {
+    '\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$':
+      '<rootDir>/src/__mocks__/fileMock.ts',
+    'assets/(.*)$': '<rootDir>/src/assets/$1',
+    'components/(.*)$': '<rootDir>/src/components/$1',
+  },
 
   // Module file extensions for importing
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json', 'node'],
@@ -19,10 +22,7 @@ module.export = {
   // Runs special logic, such as cleaning up components
   // when using React Testing Library and adds special
   // extended assertions to Jest
-  setupFilesAfterEnv: [
-    '@testing-library/jest-dom/extend-expect',
-    '@testing-library/react/cleanup-after-each',
-  ], // setupFiles before the tests are ran
+  setupFilesAfterEnv: ['@testing-library/jest-dom/extend-expect'], // setupFiles before the tests are ran
 
   // Test spec file resolution pattern
   // Matches parent folder `__tests__` and filename

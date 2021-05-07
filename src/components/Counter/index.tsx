@@ -1,13 +1,7 @@
 import { FC, useState } from 'react';
-import styled from 'styled-components';
 import Logo from 'assets/svgs/logo.svg';
 import logo from 'assets/png/logo512.png';
-
-const Container = styled.div`
-  border: 1px solid red;
-  padding: 1rem;
-  margin: 1rem;
-`;
+import { Container } from './Counter.style';
 
 export interface CounterProps {
   height?: number;

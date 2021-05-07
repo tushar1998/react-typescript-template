@@ -23,16 +23,12 @@
     "no-console": "warn",
     "import/no-unresolved": "off",
     "import/extensions": "off",
+    "import/prefer-default-export": "off",
     "spaced-comment": "warn",
     "react/prop-types": "off",
     "react/react-in-jsx-scope": "off",
     "react/jsx-props-no-spreading": "off",
     "import/no-extraneous-dependencies": "off",
     "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx", ".ts", ".tsx"] }]
-    // "jest/no-disabled-tests": "warn",
-    // "jest/no-focused-tests": "error",
-    // "jest/no-identical-title": "error",
-    // "jest/prefer-to-have-length": "warn",
-    // "jest/valid-expect": "error"
   }
 }
