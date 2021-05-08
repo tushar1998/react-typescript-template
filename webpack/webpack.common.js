@@ -1,6 +1,16 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
+const { DefinePlugin } = require('webpack');
+const dotenv = require('dotenv');
+
+const env = dotenv.config().parsed;
+
+const envKeys = Object.keys(env).reduce((prev, next) => {
+  // eslint-disable-next-line no-param-reassign
+  prev[`process.env.${next}`] = JSON.stringify(env[next]);
+  return prev;
+}, {});
 
 module.exports = {
   entry: path.resolve(__dirname, '..', './src/index.tsx'),
@@ -58,5 +68,6 @@ module.exports = {
     new CopyWebpackPlugin({
       patterns: [{ from: path.join(__dirname, 'source'), to: 'dest', noErrorOnMissing: true }],
     }),
+    new DefinePlugin(envKeys),
   ],
 };

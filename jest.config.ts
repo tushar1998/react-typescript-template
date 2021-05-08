@@ -13,6 +13,8 @@ export default {
       '<rootDir>/src/__mocks__/fileMock.ts',
     'assets/(.*)$': '<rootDir>/src/assets/$1',
     'components/(.*)$': '<rootDir>/src/components/$1',
+    'utils/test-utils': '<rootDir>/src/utils/test-utils.tsx', // Temporary Fix
+    // 'utils/(.*)$': '<rootDir>/src/utils/$1',
   },
 
   // Module file extensions for importing

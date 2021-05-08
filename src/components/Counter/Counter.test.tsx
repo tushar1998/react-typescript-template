@@ -1,5 +1,5 @@
-import { render, cleanup, screen, fireEvent } from '../utils/test-utils';
-import Counter from '../components/Counter';
+import Counter from 'components/Counter';
+import { render, cleanup, screen, fireEvent } from 'utils/test-utils';
 
 afterEach(() => cleanup());
 
