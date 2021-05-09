@@ -5,6 +5,8 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 const { DefinePlugin } = require('webpack');
 const dotenv = require('dotenv');
 
+//! Note : Alias and Rules are the same for Storybook Webpack configuration
+
 let envKeys = {};
 try {
   const env = dotenv.config().parsed;
@@ -36,7 +38,6 @@ module.exports = {
     port: 3000,
   },
   module: {
-    // Please Append the rules and keep the order intact Temporary Fix
     rules: [
       {
         test: /\.(ts|js)x?$/,

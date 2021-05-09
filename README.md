@@ -1,5 +1,5 @@
 <h1 align="center">
-    React TypeScript Template
+    React Template
 </h1>
 
 <div align="center">
@@ -12,3 +12,19 @@
 [![](https://img.shields.io/badge/node-latest-green?style=flat-square)](https://nodejs.org)
 
 </div>
+
+# Description
+
+This Template is for building React efficient React Frontend Apps. It uses modern JavaScript, is built with [TypeScript](https://www.typescriptlang.org/) (typed superset of JavaScript that compiles to plain JavaScript) and several addons for efficient development
+
+# Specification
+
+- Package Manager : 🧶 yarn Version 1.22.5
+- Compiler : 🤖 Babel Version 7
+- Framework : 🔥 React Project (TypeScript) Verison 17
+- Bundler : 📦 Webpack Version 5
+- Styling : 💅 styled-components (supports traditional css/scss)
+- Component Preview : 🔖 Storybook with Webpack 5 bundler
+- Environment Variable - ⚙️ Support with .env file
+- Development : eslint, prettier, editorconfig
+- Testing : 🧪 React Testing Library with Jest

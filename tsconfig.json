@@ -18,6 +18,6 @@
     // "checkJs": true /* Report errors in .js files. Works in tandem with allowJs. */,
     "baseUrl": "src"
   },
-  "include": ["src", "src/types.d.ts", "src/env-setup.ts"],
+  "include": ["src", "src/types.d.ts"],
   "exclude": ["./node_modules", "./public", "./dist", "./.vscode"]
 }
