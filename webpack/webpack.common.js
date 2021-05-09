@@ -1,16 +1,23 @@
+/* eslint-disable no-console */
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const { DefinePlugin } = require('webpack');
 const dotenv = require('dotenv');
 
-const env = dotenv.config().parsed;
+let envKeys = {};
+try {
+  const env = dotenv.config().parsed;
 
-const envKeys = Object.keys(env).reduce((prev, next) => {
-  // eslint-disable-next-line no-param-reassign
-  prev[`process.env.${next}`] = JSON.stringify(env[next]);
-  return prev;
-}, {});
+  envKeys = Object.keys(env).reduce((prev, next) => {
+    // eslint-disable-next-line no-param-reassign
+    prev[`process.env.${next}`] = JSON.stringify(env[next]);
+    return prev;
+  }, {});
+  console.log('Loaded Environment variable from .env');
+} catch (error) {
+  console.log('.env File Not Found');
+}
 
 module.exports = {
   entry: path.resolve(__dirname, '..', './src/index.tsx'),
