@@ -37,6 +37,7 @@ module.exports = {
   devServer: {
     port: 3000,
   },
+  stats: 'minimal',
   module: {
     rules: [
       {
