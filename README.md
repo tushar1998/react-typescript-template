@@ -28,3 +28,8 @@ This Template is for building React efficient React Frontend Apps. It uses moder
 - Environment Variable - ⚙️ Support with .env file
 - Development : eslint, prettier, editorconfig
 - Testing : 🧪 React Testing Library with Jest
+
+# Future Implementations
+ - Code Spiltting
+ - Tree Shaking
+ - cross-env
