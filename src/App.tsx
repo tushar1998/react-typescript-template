@@ -2,6 +2,7 @@ import { FC } from 'react';
 import { Container, Header, Image, Link } from 'styles/App.style';
 import logo from 'assets/png/logo512.png';
 import GlobalStyle from 'styles/globalStyles';
+import Counter from 'components/Counter';
 
 const App: FC = () => (
   <div>
@@ -17,6 +18,7 @@ const App: FC = () => (
           Learn React
         </Link>
       </Header>
+      <Counter />
     </Container>
   </div>
 );

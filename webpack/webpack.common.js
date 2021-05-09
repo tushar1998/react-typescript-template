@@ -36,6 +36,7 @@ module.exports = {
     port: 3000,
   },
   module: {
+    // Please Append the rules and keep the order intact Temporary Fix
     rules: [
       {
         test: /\.(ts|js)x?$/,
@@ -55,12 +56,13 @@ module.exports = {
         type: 'asset/resource',
       },
       {
-        test: /\.(woff(2)?|eot|ttf|otf|)$/,
+        test: /\.(woff(2)?|eot|ttf|otf)$/,
         type: 'asset/inline',
       },
       {
         test: /\.svg$/,
-        use: ['@svgr/webpack'],
+        enforce: 'pre',
+        loader: require.resolve('@svgr/webpack'),
       },
     ],
   },

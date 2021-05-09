@@ -8,13 +8,13 @@
   "scripts": {
     "start": "webpack serve --config webpack/webpack.config.js --env env=dev",
     "build": "yarn clean && webpack --config webpack/webpack.config.js --env env=prod",
-    "storybook": "start-storybook -p 6006",
     "analyze": "yarn clean && webpack --config webpack/webpack.config.js --env env=prod --analyze",
     "clean": "rimraf build",
     "lint": "eslint --fix \"./src/**/*.{js,jsx,ts,tsx,scss,css,json}\"",
     "format": "prettier --write \"./src/**/*.{js,jsx,ts,tsx,scss,css,json,md}\"",
     "test": "jest -c jest.config.ts --watch",
     "coverage": "jest -c jest.config.ts --coverage",
+    "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
   },
   "keywords": [
@@ -55,6 +55,7 @@
     "@storybook/addon-actions": "^6.2.9",
     "@storybook/addon-essentials": "^6.2.9",
     "@storybook/addon-links": "^6.2.9",
+    "@storybook/builder-webpack5": "^6.2.9",
     "@storybook/react": "^6.2.9",
     "@svgr/webpack": "^5.5.0",
     "@testing-library/jest-dom": "^5.12.0",
