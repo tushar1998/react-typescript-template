@@ -29,11 +29,14 @@ jobs:
       - node/install-packages:
           pkg-manager: yarn
       - run:
-          name: build
+          name: Compile Project
           command: yarn build
       - run:
-          name: Run tests
-          command: npm test
+          name: Run Tests
+          command: yarn test
+      - run:
+          name: Netlify Deploy
+          command: yarn deploy
 
 workflows:
   # Below is the definition of your workflow.
