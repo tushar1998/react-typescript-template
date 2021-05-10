@@ -13,7 +13,7 @@
     "lint": "eslint --fix \"./src/**/*.{js,jsx,ts,tsx,scss,css,json}\"",
     "format": "prettier --write \"./src/**/*.{js,jsx,ts,tsx,scss,css,json,md}\"",
     "test": "jest -c jest.config.ts",
-    "coverage": "jest -c jest.config.ts --coverage",
+    "coverage": "jest -c jest.config.ts --coverage --watch",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
   },
