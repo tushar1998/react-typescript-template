@@ -12,10 +12,11 @@
     "clean": "rimraf build",
     "lint": "eslint --fix \"./src/**/*.{js,jsx,ts,tsx,scss,css,json}\"",
     "format": "prettier --write \"./src/**/*.{js,jsx,ts,tsx,scss,css,json,md}\"",
-    "test": "jest -c jest.config.ts --watch",
-    "coverage": "jest -c jest.config.ts --coverage",
+    "test": "jest -c jest.config.ts",
+    "coverage": "jest -c jest.config.ts --coverage --watch",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "deploy": "netlify deploy --dir=./build -p -m \"$(git log -1 --pretty=%B)\""
   },
   "keywords": [
     "React",
@@ -83,6 +84,7 @@
     "husky": "^4.0.0",
     "jest": "^26.6.3",
     "lint-staged": "^10.5.4",
+    "netlify-cli": "^3.29.2",
     "prettier": "^2.2.1",
     "react-refresh": "^0.9.0",
     "rimraf": "^3.0.2",
