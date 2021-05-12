@@ -25,10 +25,12 @@ This Template is for building React efficient React Frontend Apps. It uses moder
 - Bundler : 📦 Webpack Version 5
 - Styling : 💅 styled-components (supports traditional css/scss)
 - Component Preview : 🔖 Storybook with Webpack 5 bundler
-- Environment Variable - ⚙️ Support with .env file
 - Development : eslint, prettier, editorconfig
 - Testing : 🧪 React Testing Library with Jest
-
+- Environment Variable - ⚙️ Support with environment files
+     - .env.local - varialbles with secrets (should include in .gitignore)
+     - .env.development - variables required while development
+     - .env.production - variables required for production
 # Future Implementations
  - Code Spiltting
  - Tree Shaking

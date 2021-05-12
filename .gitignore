@@ -12,7 +12,7 @@
 /build
 
 # Environment files
-.env
+.env.local
 
 #others
 yarn-error.log

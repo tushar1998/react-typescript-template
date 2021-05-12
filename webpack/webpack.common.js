@@ -2,23 +2,21 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
-const { DefinePlugin } = require('webpack');
 const dotenv = require('dotenv');
-
-//! Note : Alias and Rules are the same for Storybook Webpack configuration
+const { DefinePlugin } = require('webpack');
 
 let envKeys = {};
 try {
-  const env = dotenv.config().parsed;
+  const env = dotenv.config({ path: path.join(__dirname, '..', '.env.local') }).parsed;
 
   envKeys = Object.keys(env).reduce((prev, next) => {
     // eslint-disable-next-line no-param-reassign
     prev[`process.env.${next}`] = JSON.stringify(env[next]);
     return prev;
   }, {});
-  console.log('Loaded Environment variable from .env');
+  console.log('Loaded Environment variable from .env.local');
 } catch (error) {
-  console.log('.env File Not Found');
+  console.log('.env.local File Not Found');
 }
 
 module.exports = {
@@ -34,10 +32,6 @@ module.exports = {
       utils: path.resolve(__dirname, '..', 'src', 'utils'),
     },
   },
-  devServer: {
-    port: 3000,
-  },
-  stats: 'minimal',
   module: {
     rules: [
       {
