@@ -32,6 +32,7 @@ module.exports = {
       utils: path.resolve(__dirname, '..', 'src', 'utils'),
     },
   },
+  devServer: { port: 3000 },
   module: {
     rules: [
       {
@@ -63,8 +64,14 @@ module.exports = {
     ],
   },
   output: {
+    clean: true,
     path: path.resolve(__dirname, '..', './build'),
-    filename: 'bundle.js',
+    filename: '[name].[chunkhash].js',
+  },
+  optimization: {
+    splitChunks: {
+      chunks: 'all',
+    },
   },
   plugins: [
     new HtmlWebpackPlugin({

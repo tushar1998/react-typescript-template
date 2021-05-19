@@ -31,9 +31,7 @@ This Template is for building React efficient React Frontend Apps. It uses moder
      - .env.local - varialbles with secrets (should include in .gitignore)
      - .env.development - variables required while development
      - .env.production - variables required for production
+- Code Spiltting : 🖖 Webpack Split Chunks (basic)
+- Tree Shaking : 🌲 Webpack Terser Plugin (basic)
+- Clone Branch react-router if you want to use [react-router-dom](https://reactrouter.com/)
 
- - Clone Branch react-router if you want to use [react-router-dom](https://reactrouter.com/)
-# Future Implementations
- - Code Spiltting
- - Tree Shaking
- - cross-env

@@ -2,6 +2,7 @@
 const dotenv = require('dotenv');
 const path = require('path');
 const { DefinePlugin } = require('webpack');
+const TerserPlugin = require('terser-webpack-plugin');
 
 let envKeys = {};
 try {
@@ -20,5 +21,15 @@ module.exports = {
   mode: 'production',
   devtool: 'source-map',
   stats: 'normal',
+  optimization: {
+    minimize: true,
+    minimizer: [
+      new TerserPlugin({
+        terserOptions: {
+          compress: true,
+        },
+      }),
+    ],
+  },
   plugins: [new DefinePlugin(envKeys)],
 };
