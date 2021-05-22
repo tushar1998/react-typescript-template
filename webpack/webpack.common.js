@@ -6,7 +6,7 @@ const DotEnv = require('dotenv-webpack');
 
 const APP_ENV = process.env.APP_ENV || 'local';
 
-const DotEnvPlugin = new DotEnv({
+const DotEnvWebPackPlugin = new DotEnv({
   systemvars: true, // load all the predefined 'process.env' variables which will trump anything local per dotenv specs. (useful for CI purposes)
   safe: true, // load '.env.example' to verify the '.env' variables are all set.
   path: path.join(__dirname, '..', `.env.${APP_ENV}`),
@@ -73,6 +73,6 @@ module.exports = {
     new CopyWebpackPlugin({
       patterns: [{ from: path.join(__dirname, 'source'), to: 'dest', noErrorOnMissing: true }],
     }),
-    DotEnvPlugin,
+    DotEnvWebPackPlugin,
   ],
 };
