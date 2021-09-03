@@ -2,22 +2,15 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
-const dotenv = require('dotenv');
-const { DefinePlugin } = require('webpack');
+const DotEnv = require('dotenv-webpack');
 
-let envKeys = {};
-try {
-  const env = dotenv.config({ path: path.join(__dirname, '..', '.env.local') }).parsed;
+const APP_ENV = process.env.APP_ENV || 'local';
 
-  envKeys = Object.keys(env).reduce((prev, next) => {
-    // eslint-disable-next-line no-param-reassign
-    prev[`process.env.${next}`] = JSON.stringify(env[next]);
-    return prev;
-  }, {});
-  console.log('Loaded Environment variable from .env.local');
-} catch (error) {
-  console.log('.env.local File Not Found');
-}
+const DotEnvWebPackPlugin = new DotEnv({
+  systemvars: true, // load all the predefined 'process.env' variables which will trump anything local per dotenv specs. (useful for CI purposes)
+  safe: true, // load '.env.example' to verify the '.env' variables are all set.
+  path: path.join(__dirname, '..', `.env.${APP_ENV}`),
+});
 
 module.exports = {
   entry: path.resolve(__dirname, '..', './src/index.tsx'),
@@ -80,6 +73,6 @@ module.exports = {
     new CopyWebpackPlugin({
       patterns: [{ from: path.join(__dirname, 'source'), to: 'dest', noErrorOnMissing: true }],
     }),
-    new DefinePlugin(envKeys),
+    DotEnvWebPackPlugin,
   ],
 };

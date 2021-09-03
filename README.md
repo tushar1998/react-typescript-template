@@ -21,17 +21,17 @@ This Template is for building React efficient React Frontend Apps. It uses moder
 
 - Package Manager : 🧶 yarn Version 1.22.5
 - Compiler : 🤖 Babel Version 7
-- Framework : 🔥 React Project (TypeScript) Verison 17
+- Framework : 🔥 React Project (TypeScript) Version 17
 - Bundler : 📦 Webpack Version 5
 - Styling : 💅 styled-components (supports traditional css/scss)
 - Component Preview : 🔖 Storybook with Webpack 5 bundler
-- Development : eslint, prettier, editorconfig
+- Development : 🎨 eslint, prettier, editorconfig
 - Testing : 🧪 React Testing Library with Jest
-- Environment Variable - ⚙️ Support with environment files
-     - .env.local - varialbles with secrets (should include in .gitignore)
-     - .env.development - variables required while development
-     - .env.production - variables required for production
+- Environment Variable -
+     - APP_ENV - Current build / running environment. Default is local.
+- Environment Configuration - ⚙️ Support with deployment specific environment files
+     - .env.example - Define a schema of what variables should be defined in .env.{your_APP_ENV}. It throws an error if all values are not configured
+     - Access the env variable in javascript using process.env.&lt;your-env-variable&gt;
 - Code Spiltting : 🖖 Webpack Split Chunks (basic)
 - Tree Shaking : 🌲 Webpack Terser Plugin (basic)
 - Clone Branch react-router if you want to use [react-router-dom](https://reactrouter.com/)
-
