@@ -1,0 +1,10 @@
+{
+  "packageRules": [
+    {
+      "matchPackagePatterns": ["*"],
+      "matchUpdateTypes": ["major", "minor", "patch"],
+      "groupName": "all major dependencies",
+      "groupSlug": "template/deps"
+    }
+  ]
+}
