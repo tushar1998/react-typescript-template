@@ -2245,7 +2245,7 @@
   dependencies:
     "@sinonjs/commons" "^1.7.0"
 
-"@storybook/addon-actions@6.2.9", "@storybook/addon-actions@^6.2.9":
+"@storybook/addon-actions@6.2.9":
   version "6.2.9"
   resolved "https://registry.yarnpkg.com/@storybook/addon-actions/-/addon-actions-6.2.9.tgz#688413ac77410690755a5da3c277bfa0ff1a10b0"
   integrity sha512-CkUYSMt+fvuHfWvtDzlhhaeQBCWlUo99xdL88JTsTml05P43bIHZNIRv2QJ8DwhHuxdIPeHKLmz9y/ymOagOnw==
@@ -2348,7 +2348,7 @@
     ts-dedent "^2.0.0"
     util-deprecate "^1.0.2"
 
-"@storybook/addon-essentials@^6.2.9":
+"@storybook/addon-essentials@6.2.9":
   version "6.2.9"
   resolved "https://registry.yarnpkg.com/@storybook/addon-essentials/-/addon-essentials-6.2.9.tgz#cd946b024804c4d9bfec4e232b74ffdf936b25ef"
   integrity sha512-zXsV4e1TCkHyDwi7hew4h9eJfDW++f2BNKzTif+DAcjPUVFDp7yC17gLjS5IhOjcQk+db0UUlFSx/OrTxhy7Xw==
@@ -2366,7 +2366,7 @@
     regenerator-runtime "^0.13.7"
     ts-dedent "^2.0.0"
 
-"@storybook/addon-links@^6.2.9":
+"@storybook/addon-links@6.2.9":
   version "6.2.9"
   resolved "https://registry.yarnpkg.com/@storybook/addon-links/-/addon-links-6.2.9.tgz#3399d14b0fc587bccdaa602f6294bc8b249c09f0"
   integrity sha512-pBiL6EUZI3c9qtCqnGx3RXF46kAxGMdo4xDC2y3mM132W//DzxkzLZRe4ZhxxGwaLzTNlNrypZ6Li6WyIaPZ/w==
@@ -2529,7 +2529,7 @@
     webpack-hot-middleware "^2.25.0"
     webpack-virtual-modules "^0.2.2"
 
-"@storybook/builder-webpack5@^6.2.9":
+"@storybook/builder-webpack5@6.2.9":
   version "6.2.9"
   resolved "https://registry.yarnpkg.com/@storybook/builder-webpack5/-/builder-webpack5-6.2.9.tgz#a60c67a63d8cc1b07b72272c16a5a30120825dfb"
   integrity sha512-wHqPDcyfJaSRdt1jDzXYjS1gZfmQRd+Wstzyb9rnLlpmrP3oAb0dXrsfHRyoG6xj5pGYPRAG7IQx9OQS7o1z5Q==
@@ -2854,7 +2854,7 @@
   dependencies:
     core-js "^3.8.2"
 
-"@storybook/react@^6.2.9":
+"@storybook/react@6.2.9":
   version "6.2.9"
   resolved "https://registry.yarnpkg.com/@storybook/react/-/react-6.2.9.tgz#84f42b3d9a5c8de814f71ae186886076ba377d2c"
   integrity sha512-glvw+o/Vek2oapYIXCYDK6gm3cuSnx0XdOpiJVcXk3KLb8JfLbdzGYYp6dcWUbyOBqGcGFRpXIgMmkcwgn+fvQ==
