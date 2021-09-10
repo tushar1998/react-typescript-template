@@ -1,4 +1,5 @@
 import Counter from 'components/Counter';
+import React from 'react';
 import { render, cleanup, screen, fireEvent } from 'utils/test-utils';
 
 afterEach(() => cleanup());

@@ -1,4 +1,4 @@
-import { FC } from 'react';
+import React, { FC } from 'react';
 import { Container, Header, Image, Link } from 'styles/App.style';
 import logo from 'assets/png/logo512.png';
 import GlobalStyle from 'styles/globalStyles';

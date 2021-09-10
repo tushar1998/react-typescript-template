@@ -2,6 +2,7 @@ export default {
   // The root of your source code, typically /src
   // `<rootDir>` is a token Jest substitutes
   roots: ['<rootDir>/src'],
+  testEnvironment: 'jsdom',
   // Jest transformations -- this adds support for TypeScript
   // using ts-jest
   transform: {

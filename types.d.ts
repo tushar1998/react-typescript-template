@@ -4,3 +4,4 @@ declare module '*.svg' {
   export default content;
 }
 declare module '*.ttf';
+declare module 'mini-css-extract-plugin';

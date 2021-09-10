@@ -1,4 +1,4 @@
-import { FC, useState } from 'react';
+import React, { FC, useState } from 'react';
 import Logo from 'assets/svgs/logo.svg';
 import logo from 'assets/png/logo512.png';
 import { Container } from './Counter.style';
@@ -16,7 +16,7 @@ const Counter: FC<CounterProps> = ({ ...rest }) => {
         Click Me!
       </button>
       <Logo />
-      <img src={logo} alt="" srcSet="" />
+      <img src={logo} alt="Logo" srcSet="" />
     </Container>
   );
 };
