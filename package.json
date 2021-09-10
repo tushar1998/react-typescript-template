@@ -2,9 +2,19 @@
   "name": "react-typescript-template",
   "version": "0.1.0",
   "description": "React TypeScript Boiler with Storybook & Styled Components and Webpack 5",
-  "main": "index.js",
-  "author": "Tushar Mistry",
+  "keywords": [
+    "React",
+    "TypeScript",
+    "Webpack 5",
+    "Starter Template",
+    "react-boilerplate",
+    "react-boilerplate-template",
+    "typescript",
+    "styled-components"
+  ],
   "license": "ISC",
+  "author": "Tushar Mistry",
+  "main": "index.js",
   "scripts": {
     "start": "cross-env APP_ENV=local NODE_ENV=development webpack serve --config webpack/webpack.config.js --env env=dev",
     "build": "cross-env APP_ENV=production NODE_ENV=production webpack --config webpack/webpack.config.js --env env=prod",
@@ -19,16 +29,6 @@
     "upgrade:package": "npx npm-check-updates -u && yarn",
     "prepare": "husky install"
   },
-  "keywords": [
-    "React",
-    "TypeScript",
-    "Webpack 5",
-    "Starter Template",
-    "react-boilerplate",
-    "react-boilerplate-template",
-    "typescript",
-    "styled-components"
-  ],
   "dependencies": {
     "@babel/core": "^7.15.5",
     "@babel/plugin-transform-runtime": "^7.14.2",
@@ -39,6 +39,7 @@
     "@svgr/webpack": "^5.5.0",
     "babel-loader": "^8.2.2",
     "copy-webpack-plugin": "^9.0.1",
+    "cross-env": "^7.0.3",
     "css-loader": "^6.2.0",
     "dotenv-webpack": "^7.0.2",
     "html-webpack-plugin": "^5.3.1",
@@ -71,7 +72,6 @@
     "@types/styled-components": "^5.1.14",
     "@typescript-eslint/eslint-plugin": "^4.31.0",
     "@typescript-eslint/parser": "^4.31.0",
-    "cross-env": "^7.0.3",
     "eslint": "^7.26.0",
     "eslint-config-airbnb": "18.2.1",
     "eslint-config-prettier": "^8.3.0",
