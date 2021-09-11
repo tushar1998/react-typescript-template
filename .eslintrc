@@ -6,8 +6,13 @@
     "node": true,
     "jest/globals": true
   },
-  "extends": ["airbnb", "prettier", "plugin:jest/recommended"],
-  "plugins": ["prettier", "jest"],
+  "extends": [
+    "airbnb",
+    "plugin:prettier/recommended",
+    "plugin:jest/recommended",
+    "plugin:sonarjs/recommended"
+  ],
+  "plugins": ["prettier", "jest", "sonarjs"],
   "globals": {
     "Atomics": "readonly",
     "SharedArrayBuffer": "readonly"
@@ -17,6 +22,8 @@
     "ecmaVersion": 2020
   },
   "rules": {
+    "sonarjs/cognitive-complexity": "error",
+    "sonarjs/no-identical-expressions": "error",
     "prettier/prettier": "warn",
     "no-use-before-define": "off",
     "no-unused-vars": "warn",
