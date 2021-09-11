@@ -7,6 +7,7 @@ import DotEnvWebpackPlugin from 'dotenv-webpack';
 import ReactRefreshWebpackPlugin from '@pmmmwh/react-refresh-webpack-plugin';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 import CopyWebpackPlugin from 'copy-webpack-plugin';
+import ForkTsCheckerWebpackPlugin from 'fork-ts-checker-webpack-plugin';
 
 export default ({ env }: { env: string }) => {
   const isEnvDevelopment = env === 'development';
@@ -44,12 +45,23 @@ export default ({ env }: { env: string }) => {
     ],
   });
 
+  const ForkTS = new ForkTsCheckerWebpackPlugin({
+    async: isEnvDevelopment,
+    typescript: {
+      enabled: true,
+      configFile: path.join(__dirname, 'tsconfig.json'),
+      mode: 'write-references',
+    },
+    logger: { infrastructure: 'webpack-infrastructure', issues: 'console', devServer: true },
+  });
+
   return {
     target: 'web',
     mode: isEnvProduction ? 'production' : isEnvDevelopment && 'development',
     bail: isEnvProduction,
     entry: { main: path.join(__dirname, 'src', 'index.tsx'), vendor: ['react', 'react-dom'] },
     devtool: isEnvProduction ? 'source-map' : isEnvDevelopment && 'cheap-module-source-map',
+    stats: isEnvDevelopment ? 'minimal' : isEnvProduction && 'normal',
     output: {
       clean: true,
       path: path.join(__dirname, 'build'),
@@ -126,6 +138,7 @@ export default ({ env }: { env: string }) => {
       Copy,
       isEnvProduction && MiniCss,
       isEnvDevelopment && ReactRefresh,
+      isEnvDevelopment && ForkTS,
     ].filter(Boolean),
   } as Configuration;
 };
