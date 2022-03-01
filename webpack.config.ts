@@ -48,11 +48,9 @@ export default ({ env }: { env: string }) => {
   const ForkTS = new ForkTsCheckerWebpackPlugin({
     async: isEnvDevelopment,
     typescript: {
-      enabled: true,
       configFile: path.join(__dirname, 'tsconfig.json'),
       mode: 'write-references',
     },
-    logger: { infrastructure: 'webpack-infrastructure', issues: 'console', devServer: true },
   });
 
   return {
@@ -85,11 +83,8 @@ export default ({ env }: { env: string }) => {
       },
     },
     devServer: {
-      static: {
-        directory: path.join(__dirname, 'build'),
-      },
-      devMiddleware: { publicPath: path.join(__dirname, 'public') },
       port: 3000,
+      historyApiFallback: true,
     } as DevServer,
     module: {
       rules: [

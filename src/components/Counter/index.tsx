@@ -7,7 +7,7 @@ export interface CounterProps {
   height?: number;
 }
 
-const Counter: FC<CounterProps> = ({ ...rest }) => {
+export default function Counter({ ...rest }: CounterProps) {
   const [count, setCount] = useState(0);
   return (
     <Container {...rest} data-testid="component">
@@ -19,6 +19,8 @@ const Counter: FC<CounterProps> = ({ ...rest }) => {
       <img src={logo} alt="Logo" srcSet="" />
     </Container>
   );
-};
+}
 
-export default Counter;
+Counter.defaultProps = {
+  height: 0,
+};

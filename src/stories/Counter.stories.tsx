@@ -9,7 +9,9 @@ export default {
   component: Counter,
 };
 
-const Template: Story = (args) => <Counter {...args} />;
+const Template: Story = function Count(args) {
+  return <Counter {...args} />;
+};
 
 export const CounterStory = Template.bind({});
 

@@ -1,8 +1,10 @@
-import React, { FC, ReactElement } from 'react';
+import React, { ReactElement } from 'react';
 import { render, RenderOptions } from '@testing-library/react';
 // import '@testing-library/jest-dom/extend-expect';
 
-const AllTheProviders: FC = ({ children }) => <div>{children}</div>;
+function AllTheProviders({ children }: { children: ReactElement }) {
+  return <div>{children}</div>;
+}
 
 const customRender = (ui: ReactElement, options?: Omit<RenderOptions, 'queries'>) =>
   render(ui, { wrapper: AllTheProviders, ...options });
